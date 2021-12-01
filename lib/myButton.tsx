@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 
 const MyButton = (props:any) => {
     return (
         <div>
-            hello
+            button
         </div>
     );
 };
