@@ -2,11 +2,12 @@
   "name": "React-UI",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/lib/index",
+  "types": "dist/lib/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production  webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,8 @@
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "~3",
     "@types/react": "^16.8.7",
-    "@types/react-dom": "^16.8.2"
+    "@types/react-dom": "^16.8.2",
+    "cross-env": "^5.2.0"
   },
   "dependencies": {
     "react": "^16.8.4",
