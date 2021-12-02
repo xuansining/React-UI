@@ -8,7 +8,7 @@ import './importAll'
 ReactDom.render(<div>
     <Icon name={'wechat'} onClick={()=>{
         console.log('hi')}} onMouseEnter={()=>{
-        console.log('enter')}}/>
+        console.log('enter')}} className={'hello word'}/>
    <Icon name={'qq'}/>
    <Icon name={'alipay'}/>
 
