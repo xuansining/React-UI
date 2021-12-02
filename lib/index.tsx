@@ -1,15 +1,3 @@
-import * as React from "react";
-import ReactDom from 'react-dom'
-import Icon from "./Icon";
-
-import './importAll'
+export {default as Icon} from './icon/icon';
 
 
-ReactDom.render(<div>
-    <Icon name={'wechat'} onClick={()=>{
-        console.log('hi')}} onMouseEnter={()=>{
-        console.log('enter')}} className={'hello word'}/>
-   <Icon name={'qq'}/>
-   <Icon name={'alipay'}/>
-
-</div>, document.getElementById('root'))

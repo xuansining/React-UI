@@ -2,6 +2,6 @@
 
 exports[`button 是个 div 1`] = `
 <div>
-  button
+  button2
 </div>
 `;

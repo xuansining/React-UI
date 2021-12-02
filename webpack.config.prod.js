@@ -1,7 +1,6 @@
-const base=require('./webpack.config')
-
-module.exports=Object.assign({},base,{
-    mode:'production',
+const base = require('./webpack.config')
+module.exports = Object.assign({}, base, {
+    mode: 'production',
     externals: {
         react: {
             commonjs: 'react',

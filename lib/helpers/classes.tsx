@@ -1,3 +1,5 @@
-export function classes(...className:(string | undefined)[]){
-   return  className.filter(Boolean).join(' ')
+function classes(...names: (string | undefined)[]) {
+  return names.filter(Boolean).join(' ');
 }
+
+export default classes;
