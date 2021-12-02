@@ -1,12 +1,13 @@
-import React, {cloneElement, Fragment} from 'react';
+import React, {cloneElement, Fragment, ReactElement, ReactNode} from 'react';
 import './dialog.scss'
 import {Icon} from "../index";
 import {classNameFactory} from "../helpers/classes";
 import ReactDOM from "react-dom";
 
+
 interface DialogProps {
     visible: boolean;
-    button: React.ReactElement[],
+    button?: React.ReactElement[],
     onClose: React.MouseEventHandler,
     isCloseModelClose?: boolean
 }
@@ -37,7 +38,7 @@ const Dialog: React.FC<DialogProps> = (props) => {
                 {children && children}
             </div>
             <div className={cm('footer')}>
-                {button.map((child, index) => {
+                {button &&button.map((child, index) => {
                     return cloneElement(child,{key: `${index}-dialog-footer`})
                 })}
             </div>
@@ -46,7 +47,54 @@ const Dialog: React.FC<DialogProps> = (props) => {
 
     return ReactDOM.createPortal(result,document.body)
 };
+
+
 Dialog.defaultProps = {
     isCloseModelClose: false
 }
+
+
+const modal=(content:ReactNode,buttons?: Array<ReactElement>,afterClose?:()=>void)=>{
+    const close=()=>{
+        ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+        ReactDOM.unmountComponentAtNode(div);
+        div.remove();
+    }
+    const component =
+        <Dialog
+            visible={true}
+            button={buttons}
+            onClose={() => {
+                close();
+                afterClose && afterClose();
+            }}>
+            {content}
+        </Dialog>;
+    const div = document.createElement('div');
+    document.body.append(div);
+    ReactDOM.render(component, div);
+    return close;
+
+}
+const alert = (content: string) => {
+    const button = <button onClick={() => close()}>OK</button>;
+    const close = modal(content, [button]);
+};
+const confirm = (content: string, yes?: () => void, no?: () => void) => {
+    const onYes = () => {
+        close();
+        yes && yes();
+    };
+    const onNo = () => {
+        close();
+        no && no();
+    };
+    const buttons = [
+        <button onClick={onYes}>yes</button>,
+        <button onClick={onNo}>no</button>
+    ];
+    const close = modal(content, buttons, no);
+};
+
+export {alert,confirm,modal}
 export default Dialog;
