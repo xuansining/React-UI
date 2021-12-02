@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+//    "paths": {
+//      "tslib": ["node_modules/tslib"]
+//    },
     "outDir": "dist",
     "declaration": true,
     "baseUrl": ".",

@@ -7178,6 +7178,11 @@ ts-jest@^24.0.0:
     semver "^5.5"
     yargs-parser "10.x"
 
+tslib@^2.0.0:
+  version "2.3.1"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=
+
 tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.nlark.com/tty-browserify/download/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"

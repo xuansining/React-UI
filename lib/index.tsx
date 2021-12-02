@@ -4,8 +4,11 @@ import Icon from "./Icon";
 
 import './importAll'
 
+
 ReactDom.render(<div>
-    <Icon name={'wechat'}/>
+    <Icon name={'wechat'} onClick={()=>{
+        console.log('hi')}} onMouseEnter={()=>{
+        console.log('enter')}}/>
    <Icon name={'qq'}/>
    <Icon name={'alipay'}/>
 
