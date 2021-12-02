@@ -7,7 +7,7 @@ const DialogExample: React.FC = () => {
     return (
         <div>
             <button onClick={()=>setVisible(!visible)}>toggle</button>
-            <Dialog visible={visible}/>
+            <Dialog visible={visible}>hi</Dialog>
         </div>)
 }
 export default DialogExample
