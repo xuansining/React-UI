@@ -1,5 +1,4 @@
 #!/bin/env bash
-
 yarn doc
 git checkout gh-page2
 mv -f doc/* ./
