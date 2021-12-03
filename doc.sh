@@ -4,5 +4,5 @@ git checkout gh-page2
 mv -f doc/* ./
 git add .
 git commit -m "update"
-git push origin gh-page2
+git push
 git checkout main
