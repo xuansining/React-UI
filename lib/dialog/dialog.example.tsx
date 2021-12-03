@@ -24,7 +24,7 @@ const DialogExample: React.FC = () => {
                     <button onClick={() => {
                         setVisible(false)
                     }}>关闭</button>
-                ]} onClose={(e) => {
+                ]} onClose={() => {
                             setVisible(false)
                         }}>hi</Dialog>
             </div>
@@ -38,7 +38,7 @@ const DialogExample: React.FC = () => {
                     <button onClick={() => {
                         setVisible2(false)
                     }}>关闭</button>
-                ]} onClose={(e) => {
+                ]} onClose={() => {
                     setVisible2(false)
                 }} isCloseModelClose={true}>hi</Dialog>
             </div>

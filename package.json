@@ -51,7 +51,10 @@
     "typescript": "^3.3.3333",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "file-loader": "^3.0.1",
+    "raw-loader": "^2.0.0",
+    "prism-react-renderer": "^0.1.6"
   },
   "dependencies": {
     "react": "^16.8.4",

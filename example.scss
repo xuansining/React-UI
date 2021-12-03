@@ -1,0 +1,57 @@
+* {margin: 0;padding: 0; box-sizing: border-box;}
+*::before {box-sizing: border-box;}
+*::after {box-sizing: border-box;}
+ul, ol {list-style: none;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+a { text-decoration: none; color: inherit; }
+pre {
+  padding: 10px;
+  font-family: "Fira Code Medium", Consolas, monospace;
+}
+$padding:10px;
+$font-color:#262626;
+$font-color-hover:#1890ff;
+$margin:10px;
+.site-page{
+  min-height: 100vh;
+}
+.site-header{
+
+  box-shadow: 2px 4px 2px rgba(0,0,0,0.1);
+}
+.site-aside{
+  margin-top: $margin;
+  h2{
+    text-align: center;
+  }
+  min-width: 10em;
+  margin-right: $margin;
+  border-right: 1px solid #eeeeee;
+  ul{
+    li{
+      a{
+        text-align: center;
+        color:$font-color;
+        display: block;
+        padding: $padding;
+        font-size: 14px;
+        &.active{
+          color: $font-color-hover;
+          background-color:#e6f7ff;
+          border-right: 2px solid #1890ff;
+        }
+        &:hover{
+          color: $font-color-hover;
+
+        }
+
+      }
+    }
+  }
+}
+.site-footer {
+  padding: $padding*2;
+  text-align: center;
+  color: #7f7f7f;
+
+}
