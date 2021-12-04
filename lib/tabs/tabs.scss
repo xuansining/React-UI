@@ -1,19 +1,23 @@
 .mui-tabs{
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   position: relative;
+
   .mui-tab{
     margin-right: 8px;
-    padding:8px 14px;
-    border: 1px solid red;
+    padding:13px 14px;
+
     position: relative;
+    &.active{
+      color: royalblue;
+    }
+
   }
   &-indicator{
     position: absolute;
     content: '';
     display: block;
-    height: 6px;
+    height: 2px;
     width: 50px;
     bottom: 0;
     left: 2px;
@@ -21,4 +25,9 @@
     transition: left 0.3s;
 
   }
+}
+.center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

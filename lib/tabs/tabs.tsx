@@ -12,7 +12,8 @@ import './tabs.scss'
 
 interface TabsProps {
   value:number;
-  onTabsChange:(event:React.MouseEvent,newValue:number)=>void
+  onTabsChange:(event:React.MouseEvent,newValue:number)=>void;
+  center?:boolean
 }
 
 const cmTabs = classNameFactory('tabs')
@@ -28,7 +29,9 @@ const Tabs: FC<TabsProps> = (props) => {
         const _ref=createRef<HTMLLIElement>()
         arrRef.push(_ref)
     }
-    const{onTabsChange,value}=props
+
+    const{onTabsChange,value,center=false}=props
+    const centerClass= center && 'center' ||undefined
     useEffect(()=>{
         arrRef.map(ref=>{
 
@@ -53,7 +56,7 @@ const Tabs: FC<TabsProps> = (props) => {
    }
 
     return (
-        <div>
+        <div className={centerClass}>
             <ul className={classes(cmTabs())} >
                 {Tabs && Tabs.map((tab,index)=>{
                     const _Tab=tab;
