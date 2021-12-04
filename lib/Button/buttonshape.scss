@@ -1,0 +1,43 @@
+.mui-button {
+  &.hasIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 1.5em;
+      height: 1.5em;
+      margin: 0 8px;
+    }
+  }
+
+  &.round {
+
+    height: 3em;
+    border-radius: 6px;
+  }
+
+  &.circle {
+
+    padding: 0 0;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+  }
+  &.loading{
+    svg{
+
+      animation: loadingCircle 1s infinite linear;
+    }
+  }
+}
+@keyframes loadingCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+

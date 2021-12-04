@@ -1,0 +1,31 @@
+
+$main:#1890ff;
+$primary:$main;
+$danger:#ff4d4f;
+$font-color:#fff;
+$outline:#d9d9d9;
+$button-hover:#40a9ff;
+.button-example{
+  display: flex;
+  flex-direction: row;
+}
+.mui-button {
+  font-size: 14px;
+  outline: none;
+  padding: 8px 16px;
+  outline: 0;
+  border: 1px;
+  cursor: pointer;
+  color: #3c3c3c;
+  margin: 10px;
+  background-color: #fff;
+}
+@import "buttonstate";
+@import 'buttonsize';
+@import 'buttontype';
+@import 'buttonshape';
+
+
+
+
+

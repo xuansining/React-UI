@@ -1,0 +1,33 @@
+.mui-button {
+  &-primary {
+    color: $font-color;
+    background-color: $main;
+    &:hover {
+      background-color: lighten($main, 10%)
+    }
+  }
+  &-dashed {
+    border: 1px dashed $outline;
+    &:hover {
+      border: 1px dashed $button-hover;
+      color: $button-hover;
+    }
+  }
+  &-text {
+    border: none;
+    &:hover {
+      background-color: #fafafa;
+    }
+  }
+  &-link {
+    color: $main;
+    border: none;
+  }
+  &-default {
+    border: 1px solid $outline;
+    &:hover {
+      border: 1px solid $button-hover;
+      color: $button-hover;
+    }
+  }
+}
