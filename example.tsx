@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter as Router, Route,  NavLink} from 'react-router-dom';
+import {HashRouter as Router, NavLink, Route} from 'react-router-dom';
 
-import ButtonExample from './lib/button.example';
+
 import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
-import Layout, {Header, Main, Aside, Footer} from "./lib/layout/layout";
+import Layout, {Aside, Footer, Header, Main} from "./lib/layout/layout";
 
 import './example.scss'
 import IconDemo from "./lib/icon/iconDemo";
+import ButtonExample from "./lib/Button/button.example";
+import InputExample from "./lib/input/input.example";
+import TabsExample from "./lib/tabs/tabs.example";
+
 ReactDOM.render(
     <Router>
         <div >
@@ -35,18 +39,26 @@ ReactDOM.render(
                                 <li>
                                     <NavLink to='/layout'>Layout</NavLink>
                                 </li>
+                                <li>
+                                    <NavLink to='/input'>Input</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/tabs'>Tabs</NavLink>
+                                </li>
                             </ul>
 
 
                     </Aside>
-                    <Main >
+                    <Main className={'site-main'} >
 
                         <main>
                             <Route path="/icon" component={IconDemo}/>
                             <Route path="/button" component={ButtonExample}/>
                             <Route path="/dialog" component={DialogExample}/>
                             <Route path="/layout" component={LayoutExample}/>
-                        </main>
+                            <Route path="/input" component={InputExample}/>
+                            <Route path="/tabs" component={TabsExample}/>
+                         </main>
 
                     </Main>
                 </Layout>
