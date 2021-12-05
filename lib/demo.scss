@@ -1,12 +1,17 @@
 .demo-wrapper{
+  width: 100%;
   margin: 10px;
   .example{
-    margin: 10px;
-    padding: 40px;
-    width: 900px;
+    margin: 7px;
+    padding: 30px 40px;
     border: 1px solid #ccc;
     border-radius: 20px;
     display: flex;
 
+  }
+  .example-code{
+  }
+  .mui-code{
+    width: 350px;
   }
 }

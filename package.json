@@ -1,9 +1,9 @@
 {
-  "name": "react-ui",
-  "version": "1.0.0",
+  "name": "react-ui-xmui",
+  "version": "0.0.3",
   "description": "",
-  "main": "dist/lib/index",
-  "types": "dist/lib/index",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "files": [
     "/dist/**/*"
   ],

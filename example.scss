@@ -5,24 +5,77 @@ ul, ol {list-style: none;}
 h1, h2, h3, h4, h5, h6 {font-weight: normal;}
 a { text-decoration: none; color: inherit; }
 pre {
-  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  padding: 15px;
   font-family: "Fira Code Medium", Consolas, monospace;
 }
 $padding:10px;
 $font-color:#262626;
 $font-color-hover:#1890ff;
 $margin:10px;
+@media (max-width: 640px) {
+  pre{
+    font-size: 12px;
+  }
+
+  .site-aside{
+    display: none;
+    text-align: center;
+    &.visible{
+      display: block;
+      background-color: white;
+      position: absolute;
+      z-index: 3;
+      margin-top: 4px;
+
+      height: 100vh;
+
+      box-shadow: 1px 0 0  rgba(0,0,0,0.2);
+    }
+  }
+  .site-header{
+    padding: 5px;
+    .logo{
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+}
+@media (min-width: 640px) {
+   .site-aside{
+     display: block;
+   }
+   .site-header{
+      .menu{
+        display: none;
+      }
+   }
+}
 .site-page{
+  width: 100%;
   min-height: 100vh;
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
-}
-.site-main{
+  .site-main{
 
+    flex-grow: 1;
+  }
 }
+
 .site-header{
-
-  box-shadow: 2px 4px 2px rgba(0,0,0,0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 3px 1px rgba(0,0,0,0.1);
+  .menu{
+    margin-left: 10px;
+    position: absolute;
+    z-index: 5;
+  }
 }
 .site-aside{
   margin-top: $margin;
@@ -55,6 +108,7 @@ $margin:10px;
   }
 }
 .site-footer {
+  background-color: #fff;
   padding: $padding*2;
   text-align: center;
   color: #7f7f7f;

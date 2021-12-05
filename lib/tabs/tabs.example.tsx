@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
-import Tabs, {Tab} from "./tabs";
+import Tabs from "./tabs";
 import TabPanel from "./tabpane";
+import Tab from "./Tab";
 
 const TabsExample = () => {
     const [value, setValue] = useState(0)
