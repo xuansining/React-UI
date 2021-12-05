@@ -5,25 +5,26 @@ import {HashRouter as Router, NavLink, Route} from 'react-router-dom';
 
 import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
-import Layout, {Aside, Footer, Header, Main} from "./lib/layout/layout";
+
 
 import './example.scss'
 import IconDemo from "./lib/icon/iconDemo";
 import ButtonExample from "./lib/Button/button.example";
 import InputExample from "./lib/input/input.example";
 import TabsExample from "./lib/tabs/tabs.example";
+import SwitchExample from "./lib/switch/switch.example";
 
 ReactDOM.render(
     <Router>
         <div >
-            <Layout className={'site-page'}>
-                <Header  className={'site-header'}>
+
+                <header  className={'site-header'}>
                     <div className="logo">
                         <img width={90} height={90} src={require('./logo.png')} alt='Mui'/>
                     </div>
-                </Header>
-                <Layout>
-                    <Aside className={'site-aside'}>
+                </header>
+            <div className={'site-page'}>
+                    <aside className={'site-aside'}>
 
                             <h2>组件</h2>
                             <ul>
@@ -45,27 +46,32 @@ ReactDOM.render(
                                 <li>
                                     <NavLink to='/tabs'>Tabs</NavLink>
                                 </li>
+                                <li>
+                                    <NavLink to='/switch'>Switch</NavLink>
+                                </li>
                             </ul>
 
 
-                    </Aside>
-                    <Main className={'site-main'} >
+                    </aside>
 
-                        <main>
+
+                        <main  className={'site-main'}>
                             <Route path="/icon" component={IconDemo}/>
                             <Route path="/button" component={ButtonExample}/>
                             <Route path="/dialog" component={DialogExample}/>
                             <Route path="/layout" component={LayoutExample}/>
                             <Route path="/input" component={InputExample}/>
                             <Route path="/tabs" component={TabsExample}/>
+                            <Route path="/switch" component={SwitchExample}/>
                          </main>
 
-                    </Main>
-                </Layout>
-                <Footer className={'site-footer'}>
-                    &copy; xuan
-                </Footer>
-            </Layout>
+
+
+
+            </div>
+            <footer className={'site-footer'}>
+                &copy; xuan
+            </footer>
         </div>
 
     </Router>

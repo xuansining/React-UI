@@ -1,0 +1,56 @@
+$unchecked:#bfbfbf;
+$checked:#1890ff;
+$height: 20px;
+$width:$height*2;
+
+$toggleWidth: $height - 4px;
+.mui-switch{
+  height:$height;
+  width: $width;
+  background-color: $unchecked;
+  border-radius: $height/2;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  &-tip{
+    font-size: 10px;
+    margin: 0 6px;
+    color: white;
+    transition: all 1s;
+    svg{
+      fill: white;
+    }
+  }
+  &-toggle{
+    position: absolute;
+    height: $toggleWidth;
+    width: $toggleWidth;
+    border-radius: $toggleWidth/2;
+    background-color: #fff;
+    top:2px;
+    left: 2px;
+    transition: all 250ms;
+    &:active{
+      width: $toggleWidth +2px;
+
+    }
+
+  }
+  &.checked{
+     justify-content: flex-start;
+    .mui-switch-toggle{
+
+      left: $width - $height +2px;
+      &:active{
+        margin-left: -4px;
+      }
+
+    }
+
+
+    background-color: $checked;
+
+  }
+}

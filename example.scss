@@ -14,11 +14,11 @@ $font-color-hover:#1890ff;
 $margin:10px;
 .site-page{
   min-height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 .site-main{
-  .mui-layout{
 
-  }
 }
 .site-header{
 

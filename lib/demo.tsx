@@ -1,6 +1,8 @@
 import React, {FC, useState} from 'react';
 import Highlight, {defaultProps} from "prism-react-renderer";
 import vsDark from 'prism-react-renderer/themes/vsDark';
+import {Button} from "./index";
+import  './demo.scss'
 type DemoProps={
     code: string
 }
@@ -22,12 +24,13 @@ const Demo:FC<DemoProps> = (props) => {
         </Highlight>
     );
     return (
-        <div>
+        <div className={'demo-wrapper'}>
+            <h2>常规用法</h2>
             <div className="example">
                 {props.children}
             </div>
             <div>
-                <button onClick={() => setCodeVisible(!codeVisible)}>查看代码</button>
+                <Button onClick={() => setCodeVisible(!codeVisible)}>查看代码</Button>
                 {codeVisible && code}
             </div>
         </div>

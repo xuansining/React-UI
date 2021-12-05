@@ -1,0 +1,7 @@
+.icon-example{
+  display: flex;
+  flex-direction: row;
+  >svg{
+    margin: 10px;
+  }
+}
