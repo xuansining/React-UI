@@ -4,7 +4,11 @@
   &::before {
     box-sizing: border-box;
   }
+
 }
+ul,ol{list-style:none; margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+a { text-decoration: none; color: inherit; }
 button {
   box-sizing: border-box;
   height: 32px;
@@ -16,4 +20,7 @@ button {
   &:last-child {
     margin-right: 0;
   }
+}
+li{
+  list-style: none;
 }
